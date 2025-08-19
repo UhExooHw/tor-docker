@@ -1,0 +1,9 @@
+services:
+  tor:
+    build: .
+    container_name: tor
+    hostname: tor
+    network_mode: host
+    volumes:
+      - ./tor_data:/var/lib/tor
+    restart: unless-stopped
